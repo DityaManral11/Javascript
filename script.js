@@ -125,6 +125,12 @@
 // const form = document.querySelector('form');
 // form.addEventListener('submit', handleSubmit)
 
-console.log("Updated Code!")
+// console.log("Updated Code!")
 
+const btn = document.querySelector("button")
+const div = document.querySelector(".container")
+const div2 = document.querySelector(".outer")
 
+btn.addEventListener("click", function(){console.log("button")}, true)
+div.addEventListener("click", function(){console.log("Div")})
+div2.addEventListener("click",function(){console.log("Div2")})
