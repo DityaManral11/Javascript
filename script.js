@@ -204,9 +204,108 @@
 //     count += 1
 // },1000);
 
-console.log("First Line")
-const id = setTimeout(() => {
-    console.log("After 2 sec")
-},2000)
-clearTimeout(id)
-console.log("Second Line")
+// console.log("First Line")
+// const id = setTimeout(() => {
+//     console.log("After 2 sec")
+// },2000)
+// clearTimeout(id)
+// console.log("Second Line")
+
+// Callback Function Example
+
+// function print (){              //callback function
+//     console.log("Hello Student")
+// }
+
+// function greet(num){        // higher order function
+//     console.log("Welcome to my class!!")
+//     setTimeout(() => {
+//         console.log("Inside setTimeout")
+//     }, 2000);
+//     num()
+// }
+
+// greet(print)  // passing function as an argument
+
+
+// Callback Function Example with changing num position
+
+// function print (){              //callback function
+//     console.log("Hello Student")
+// }
+
+// function greet(num){        // higher order function
+//     console.log("Welcome to my class!!")
+//     setTimeout(() => {
+//         console.log("Inside setTimeout")
+//     num()
+//     }, 2000);
+// }
+
+// greet(print)  // passing function as an argument
+
+
+// Callback Function Example with Argument
+
+// function print (name){              //callback function
+//     console.log("Hello Student", name)
+// }
+
+// function greet(num){        // higher order function
+//     console.log("Welcome to my class!!")
+//     setTimeout(() => {
+//         console.log("Inside setTimeout")
+//         let firstname = "Jiya"
+//         num(firstname)
+//     }, 2000);
+// }
+
+// greet(print)  // passing function as an argument
+
+
+// Callback Hell Example
+
+// console.log("Starting Homework...");
+
+// setTimeout(() => {
+//     console.log("Homework done!");
+//     console.log("Starting Dinner...");
+
+//     setTimeout(() => {
+//         console.log("Dinner done!");
+//         console.log("Getting ready to go out....");
+
+//         setTimeout(() => {
+//             console.log("Going to the playground!");
+//         }, 1000);          //after dinner
+
+//     }, 1500);       //dinner time
+
+// }, 2000);           // homework time
+
+
+// 2nd method Callback Hell Example
+
+// function finishHomework(callback){
+//     console.log("Starting Homework...");
+//     setTimeout(() => {
+//         console.log("Homework done!");
+//         callback();
+//     }, 2000);
+// }
+// function eatDinner(callback){
+//     console.log("Starting Dinner...");
+//     setTimeout(() => {
+//         console.log("Dinner done!");
+//         callback();
+//     }, 1500);
+// }
+// function goPlayground(){
+//     console.log("Going to the playground!");
+// }
+
+// finishHomework(() => {
+//     eatDinner(() => {
+//         goPlayground()
+//     });
+// });
