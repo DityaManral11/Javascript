@@ -134,3 +134,79 @@
 // btn.addEventListener("click", function(){console.log("button")}, true)
 // div.addEventListener("click", function(){console.log("Div")})
 // div2.addEventListener("click",function(){console.log("Div2")})
+
+
+// debugger
+// console.log(a)
+
+// var a=78  //part of global scope
+// let b=90  //part of script scope
+// console.log(a)
+// console.log(b)
+
+// function print(){
+//     let c=45
+//     console.log(c)
+//     console.log("Inside Function")
+// }
+// print()
+
+
+// debugger
+// function first(){
+//     second()
+// }
+// function second(){
+//     third()
+// }
+// function third(){
+//     console.trace()
+// }
+// first()
+
+// let total=100
+
+// function calculate()
+
+// ASYNCHRONOUS PROGRAMMING
+
+// console.log("First Line")
+// setTimeout(() => {
+//     console.log("After 2 sec")
+// },2000)
+// console.log("Second Line")
+
+// setTimeout(() => {
+//     alert("Alert after 3 sec")
+// }, 3*1000)
+
+
+// const timerId = setInterval(() => {
+//     console.log("Hello Students!")
+// },2000)             // for 2 sec
+
+// console.log(timerId)
+// clearInterval()
+
+// const timerId = setInterval(() => {
+//     console.log("Hello Students!")
+// },1000)             // for 2 sec
+
+// setTimeout(() => {
+//     clearInterval(timerId)
+// },10*1000)
+
+// let count = 1;
+
+// const id = setInterval(() => {
+//     if(count == 10)clearInterval(id) 
+//     console.log(count);
+//     count += 1
+// },1000);
+
+console.log("First Line")
+const id = setTimeout(() => {
+    console.log("After 2 sec")
+},2000)
+clearTimeout(id)
+console.log("Second Line")
