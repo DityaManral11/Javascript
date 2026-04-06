@@ -675,19 +675,30 @@
 // console.log(gen.next())
 // console.log(gen.next())
 
+
+// CURRYING
+
 // function add(a,b,c){
 //     return a+b+c
 // }
 
-function add(a){
-    return function(b){
-        return function(c){
-            return a+b+c
-        }
-    }
-}
+// function add(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
 
-const first = add(1)
-const second = first(2)
-const third = second(3)
-console.log(third)
+// const first = add(1)
+// const second = first(2)
+// const third = second(3)
+// console.log(third
+
+https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=1246326d38173dbcc1b5241d0d58cffc
+
+
+
+
+// UNIT - 3 INTRODUCTION TO REACT
+ 
