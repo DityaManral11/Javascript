@@ -1,16 +1,24 @@
 import React,{useState} from 'react'
+import { Link,NavLink } from 'react-router-dom'
 
 function HomePage() {
-    const[login,setLogin] = useState(false)
+    const [login, setLogin] = useState(false)
 //   if(login){
-    // return<><button onClick={()=>setLogin(false)}>Logout</button></>
+//     return<><button onClick={()=>setLogin(false)}>Logout</button></>
 //   }else{
-    // return<><button onClick={()=>setLogin(true)}>Login</button></>
+//     return<><button onClick={()=>setLogin(true)}>Login</button></>
 //   }
 
-  return(
+  return (
     <>
     {login?<button onClick={()=>setLogin(false)}>Logout</button>:<button onClick={()=>setLogin(true)}>Login</button>}
+    <ul>
+      <li><Link to="/">HomePage</Link></li>
+      <li><NavLink to="/" style={({isActive})=>({color:isActive?"red":"blue"})}>HomePage</NavLink></li>
+      <li><Link to="/contact">Contact</Link></li>
+      <li><NavLink to="/contact" style={({isActive})=>({color:isActive?"red":"blue"})}>Contact</NavLink></li>
+
+    </ul>
     </>
   )
 }

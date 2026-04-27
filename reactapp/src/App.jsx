@@ -7,7 +7,8 @@ import {add,subtract} from './utility'
 import Sample from './component/Sample'
 import HomePage from './component/HomePage'
 import Contact from './component/Contact'
-import { Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import { UserContext } from './UserContext'
 
 
 function App() {
@@ -17,14 +18,17 @@ function App() {
   return (
     <>
 
-
-       <Routes>
-        <Route path='/' element={<>HomePage</>Sample/></>}
-       </Routes>
-      <Sample count={count} setCount={setCount}/>
-      <HomePage/>
-      <Contact/>
-    </>                                    mṁ
+      <UserContext.Provider value = {name}>
+        <Routes>
+          <Route path='homepage' element={<HomePage/>}>
+            <Route path='sample' element={<Sample/>}/>
+          </Route>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/profile/:username' element={<Profile/>}/>
+        </Routes>
+      </UserContext.Provider>
+      
+    </>
   )
 }
 
